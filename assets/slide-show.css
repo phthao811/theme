@@ -1,0 +1,227 @@
+.slide-show .slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.slide-show {
+  width: 100%;
+}
+
+.slide-show .slide.slide-slick {
+  overflow: hidden;
+}
+.slide-show .container-fluid {
+  padding: 0;
+}
+.slide-show .slide {
+  width: 100%;
+  margin: 0 auto;
+}
+.slider-content {
+  width: 100%;
+  position: relative;
+}
+
+.text-slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.text-slider h4 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.slide-btn {
+  display: inline-block;
+  margin-top: 5rem;
+}
+.slide-btn span {
+  background-color: #fff;
+  padding: 1.5rem 5rem;
+  display: inline-block;
+  line-height: 1.6rem;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.slide-btn span:hover {
+  color: #fff;
+  background-color: #000;
+  border-radius: 3rem;
+}
+
+.slide-show .link-base {
+  max-width: max-content;
+}
+
+.slide-show .link-base.link-center {
+  margin: 0 auto;
+}
+
+.slide-show .link-base.link-right {
+  margin: 0 0 0 auto;
+}
+
+.image-slide-show__media--placeholder .placeholder-svg {
+  height: 100%;
+  width: 100%;
+  min-height: 300px;
+}
+
+/* CSS */
+.text-slider h2 {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 55px;
+  color: var(--accent-4);
+  margin-bottom: 20px;
+}
+.text-slider .description-slide {
+  font-size: 15px;
+  color: var(--accent-4);
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+
+/* CSS DOTS */
+.slide-show .slick-dots li button::after {
+  display: none;
+}
+.slide-show .slick-dots li button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.slide-show .slick-dots li.slick-active button::before {
+  background-color: var(--primary);
+}
+.slide-show .slick-dots li:hover button::before {
+  background-color: var(--primary);
+}
+.slide-show .slick-dots {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.slide-show .slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+}
+.slide-show .slick-dots li button {
+  position: relative;
+  cursor: pointer;
+  font-size: 0px;
+  display: block;
+  border-radius: 100%;
+  transition: all 0.3s ease 0s;
+  background-color: transparent;
+  margin-right: 7px;
+}
+.slide-show .slick-dots li.slick-active,
+.slide-show .slick-dots li {
+  padding: 0;
+}
+
+/* CSS ARROW */
+.slide-show button.slick-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  color: var(--accent-4);
+  border: 1px solid var(--primary);
+  transition: all 0.4s;
+}
+.slide-show button.slick-arrow:hover {
+  background: var(--primary);
+  color: var(--accent-4);
+}
+.slide-show .slick-prev {
+  left: -50px;
+}
+.slide-show:hover .slick-prev {
+  left: 10px;
+}
+.slide-show .slick-next {
+  right: -50px;
+}
+.slide-show:hover .slick-next {
+  right: 10px;
+}
+.slide-show .slick-next:before {
+  content: "\f178";
+}
+.slide-show .slick-prev:before {
+  content: "\f177";
+}
+.slide-show .slick-prev:before,
+.slide-show .slick-next:before {
+  font-family: "Font Awesome 5 Pro";
+  font-size: 16px;
+  line-height: 40px;
+  color: #fff;
+  display: block;
+  margin-top: -2px;
+}
+
+@media (min-width: 992px) {
+  .text-slider {
+    max-width: 96rem;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .text-slider {
+    max-width: 120rem;
+  }
+}
+@media (min-width: 1500px) {
+  .text-slider {
+    padding: 0;
+    max-width: 132rem;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  .slide-image.media {
+    padding-bottom: 65% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .slide-image.media {
+    padding-bottom: 80% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-image.media {
+    padding-bottom: 130% !important;
+  }
+  .text-slider h2 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+  .text-slider .description-slide {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+}

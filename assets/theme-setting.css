@@ -1,0 +1,182 @@
+
+      Liquid error: This liquid context does not allow includes.
+
+    
+
+
+
+@font-face {
+  font-family: Amiri;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/amiri/amiri_n4.33f03ad85977dcd0f607792cd27b2143d63a6552.woff2?&hmac=993013b46d100e783ed2552336d9834e302eda2835bcbb72498606ced0f826e3") format("woff2"),
+       url("https://fonts.shopifycdn.com/amiri/amiri_n4.2d85330f8e5476326678a51d24d81150b376720b.woff?&hmac=37048df6f0df9db11f8ecccf70fdaa72f67f2fdd9341718863e9ac3369276777") format("woff");
+}
+
+      @font-face {
+  font-family: Amiri;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/amiri/amiri_n7.3c33a95a0f2ec579fe307211f4076d23082fd631.woff2?&hmac=2173f37a7398b11e30200e454137a01a1d5eafd12af0b0b9365fbd39481e7d67") format("woff2"),
+       url("https://fonts.shopifycdn.com/amiri/amiri_n7.157c2e40c3dae16f1fa6546ed7351dceb647f060.woff?&hmac=6704fc5cdd4477a4833e8eb3855b5f981dbb874c61c2699b948f5ad1c85d0594") format("woff");
+}
+
+      @font-face {
+  font-family: Amiri;
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/amiri/amiri_i4.67141ba5038dd816aba38b780ea52e9cb129c483.woff2?&hmac=86b2c141f70f8f5d98a62bf6ed198ddcbd4cd96d782841d1035598dcbbe185f8") format("woff2"),
+       url("https://fonts.shopifycdn.com/amiri/amiri_i4.4d6a400c830c0e5111931eb5d37345d120435c4c.woff?&hmac=71240a0fc925b94ce2a1e2456f29cfd792e7b0f0470a92da83a88952489496f5") format("woff");
+}
+
+      @font-face {
+  font-family: Amiri;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/amiri/amiri_i7.f5cb5ad7c202baad0141069f71329664e4943761.woff2?&hmac=b96e01fc59f3ff245aed4b670a89b5c8a87aab85492524f8878b21048625fcad") format("woff2"),
+       url("https://fonts.shopifycdn.com/amiri/amiri_i7.4319de4fc308b731e01c25c899e458fbabfc6261.woff?&hmac=324f50d3a2830bedfbd8d3df45b864d7b129c7a0f956e3d009589f6e09e79909") format("woff");
+}
+
+      @font-face {
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/nunito_sans/nunitosans_n4.2b61d9dcf54d8ac8282cfd1ebb6964c79a7efcd1.woff2?&hmac=8cc42143eae778b5a4489df2cc2cac3253120cc1e3acdd0342ed736216541bf9") format("woff2"),
+       url("https://fonts.shopifycdn.com/nunito_sans/nunitosans_n4.420cbf408f643f8ff8fd948b99c10dade8b6af79.woff?&hmac=0a96c8ac3d522763f19edefabd69663b968f08a29ebaeb7407601cc91a24defc") format("woff");
+}
+
+
+      :root {
+        --g-font-1: Lora, Sans-serif;
+        --g-font-2: Marcellus, serif;
+        --font-body-family: Lora;
+        --font-body-style: normal;
+        --font-body-weight: 400;
+
+        --font-heading-family: Marcellus;
+        --font-heading-style: normal;
+        --font-heading-weight: 400;
+
+        --color-background-sould-out-label: #ffffff;
+        --color-text-sould-out-label: #000000;
+        --color-background-new-label: #000000;
+        --color-text-new-label: #000;
+        --color-background-sale-label: #e5ad9c;
+        --color-text-sale-label: #ffffff;
+
+        --color-menu-vertical-text: #ffffff;
+        --color-menu-vertical-text-hover: #0000ff;
+        --color-label-vertical-text: #000000;
+        --color-label-vertical-text-hover: #0026ff;
+        
+        --color-menu_text: #ffffff;
+        --color-menu_text_hover: #e5ad9c;
+        --color-label_text: #8e8e8e;
+        --color-label_text_hover: #e5ad9c;
+
+        --color-base-header: #000000;
+        --color-base-link: #000000;
+        --color-base-link-hover: #e5ad9c;
+        --color-label-new: #01bad4;
+        --color-label-hot: #ff414c;
+        --color-label-sale: #fe9931;
+        --color-label-other: #848484;        
+
+        --payment-terms-background-color: #f6f6f6;
+
+        --gradient-base-background-1: #f6f6f6;
+        --gradient-base-background-2: #2a2a2a;
+        --gradient-base-accent-1: #121212;
+          : #f7f7f7;
+
+        --page-width: 132rem;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 100%;
+        min-height: 100%;
+        margin: 0;
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        line-height: 1.8;
+        font-family: Lora;
+        font-weight: 400;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .h0,
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5 {
+        font-family: Marcellus;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: var(--color-base-header);
+        line-height: 1.3;
+      }
+
+      @media screen and (min-width: 750px) {
+        body {
+          font-size: 1.4rem;
+        }
+      }
+    .slide-slick .slider-conten:first-child,
+    .slick-initialized.slide-slick .slider-conten{
+      position: relative;
+      left: unset;
+      top: unset;
+    }
+    .slide-slick .slider-conten{
+      position: absolute;
+      left: -99999px;
+      top: -999px;
+    }
+    @media only screen and (max-width: 600px) {
+      .vertical-bars svg, .site-header__icon-menu svg{
+        width: 20px;
+        height: 20px;
+      }
+      .image-slide-show__media--placeholder .placeholder-svg {
+        height: 100%;
+        width: 100%;
+        min-height: 300px;
+      }
+      .text-slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .js-cookie-policy{
+    	display: none;
+      }
+    }

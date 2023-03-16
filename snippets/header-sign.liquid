@@ -1,0 +1,65 @@
+<!-- header-sign.liquid -->
+
+{{ 'header-sign.css' | asset_url | stylesheet_tag }}
+
+<div class="header-sign">
+    <div class="header-login">
+      {% if customer %}
+      <p><a>Hello {{customer.first_name }}</a></p>
+        
+        <p><a href="/account/logout" title="Logout" class="site-header__link">
+          Logout
+        </a>
+        </p>
+      <p><a href="/account" title="My acount">My account</a></p>
+
+      {%- else -%}
+
+      <p><a href="/account/login" class="site-header__link">Login</a></p>
+        <p><a href="/account/register" title="Register">Register</a></p>
+        
+      {%- endif -%}
+    </div>
+    
+    <button class="show_login" type="button">
+      {%- render 'icon-user' -%}
+      <span class="d-none">icon-user</span>
+    </button>
+
+    <div class="mini-acount">   
+        {% if customer %}
+          <p><a>Hello {{customer.first_name }}</a></p>
+          
+          <p><a href="/account/logout" title="Logout" class="site-header__link">
+            <i class="fa fa-unlock-alt"></i>
+            Logout
+          </a>
+          </p>
+          <p><a href="/account" title="My acount">
+            <i class="fa fa-user"></i>
+            My Account</a></p>
+  
+        {%- else -%}
+  
+          <p><a href="/account/login" class="site-header__link">
+            <i class="fa fa-unlock-alt"></i>
+            Login</a></p>
+          <p><a href="/account/register" title="Register">
+            <i class="fa fa-edit"></i>
+            Register</a></p>
+          <p><a href="/account" title="My acount">
+            <i class="fa fa-user"></i>
+            My Account</a></p>
+  
+        {%- endif -%}
+        <p><a href="/cart" title="Checkout">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          Check Out</a></p>
+        <p><a href="/pages/compare" class="site-header__compare" title="Compare">
+          <i class="fa fa-retweet"></i>
+          Compare
+          <span class="js-compare-count text-center d-none"></span>
+          </a></p>
+    </div>
+
+  </div>

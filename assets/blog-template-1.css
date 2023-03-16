@@ -1,0 +1,31 @@
+.blog-items.blog-layout-items-1{
+    padding: 0 15px;
+  }
+
+.blog-post .blog-list{
+  margin: 0 -15px;
+}
+
+.blog-layout-items-1 .btn-view-blog{
+  text-align: center;
+    margin-top: 15px;
+}
+
+.blog-layout-items-1 .btn-view-blog .link-blog-all{
+  padding: 5px 40px;
+  background: #000;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.blog-layout-items-1 .blog-title{
+  margin: 15px 0;
+}
+
+.blog-layout-items-1 .blog-date{
+  margin-right: 15px;
+}
+
+.blog-layout-items-1 .blog-description{
+  margin-top: 15px;
+}

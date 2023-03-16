@@ -1,0 +1,121 @@
+.footer-2{
+  padding: 5rem 0;
+}
+
+.footer-2 .top-footer{
+  padding: 4rem 0;
+}
+
+.footer-2 .newlester-footer{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-2 .newlester-footer h2.footer-block__heading{
+  margin-right: 30px;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+.footer-2 .newlester-footer form#ContactFooter{
+  display: flex;
+  position: relative;
+}
+
+.footer-2 .newlester-footer form#ContactFooter .newsletter-form__message.form__message{
+  position: absolute;
+  top: 100%;
+}
+
+.footer-2 .newlester-footer input#NewsletterForm--footer-2{
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.footer-2 .center-footer{
+  padding: 15px 0;
+}
+
+.footer-2 .icon-card-footer{
+  justify-content: flex-end;
+}
+
+.footer-2 .title-footer{
+  position: relative;
+}
+
+.footer-2 .drawer__nav-toggle--open{
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.footer-2 .fa{
+  font-size: 18px;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.fa-angle-down:before {
+  content: "\f107";
+}
+
+.fa-angle-up:before {
+  content: "\f106";
+}
+
+.footer-2 .footer__copyright{
+  font-size: 16px;
+}
+
+@media(max-width: 575px){
+  .footer-2{
+    padding: 3rem 0;
+  }
+
+  .footer-2 .newlester-footer h2.footer-block__heading{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .footer-2 .footer-block__newsletter{
+    margin: 0 auto;
+  }
+
+  .footer-2 .newlester-footer{
+    flex-direction: column;
+  }
+
+  .footer-2 .drawer__nav-toggle--open{
+      display: block;
+  }
+
+  .menu-footer .footer-menu{
+      overflow: hidden;
+      display: none;
+      animation: all 0.5s ease-in;
+  }
+
+  .menu-footer.active .footer-menu{
+      display: block;
+  }
+}
+
+@media(max-width: 767px){
+  .footer-2 .text-content, .footer-2 .logo-footer, .footer-2 .menu-footer{
+    margin-bottom: 15px;
+  }
+
+  .bottom-footer-coppy{
+    text-align: center;
+  }
+
+  .footer-2 .icon-card-footer{
+    justify-content: center;
+    margin-top: 15px;
+  }
+}

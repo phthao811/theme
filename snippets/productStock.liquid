@@ -1,0 +1,17 @@
+{% liquid assign current_variant = product.selected_or_first_available_variant %}
+<span id="ProductStock" class="pl-2 product-single__stock {% unless current_variant.inventory_management and current_variant.inventory_quantity < 10 and current_variant.inventory_quantity > 0 or  current_variant.inventory_management and current_variant.inventory_quantity <= 0 and current_variant.incoming %} hide{% endunless %}">
+  {%- if current_variant.inventory_management -%}
+    {%- if current_variant.inventory_quantity < 10 and current_variant.inventory_quantity > 0 -%}
+      {%- liquid assign qty = current_variant.inventory_quantity -%}
+      {{ settings.stock_available }} {{ qty }}
+    {%- elsif current_variant.inventory_quantity == 0 or current_variant.inventory_quantity < 0 and current_variant.incoming -%}
+      {%- if current_variant.available -%}
+        {%- liquid assign date = current_variant.next_incoming_date | date: "%B %-d, %Y" -%}
+        {{ settings.will_not_ship_until }} {{ date }}
+      {%- else -%}
+        {%- liquid assign date = current_variant.next_incoming_date | date: "%B %-d, %Y" -%}
+        {{ settings.will_be_in_stock_after }} {{ product.will_be_in_stock_after | t: date: date }}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+</span>

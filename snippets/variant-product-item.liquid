@@ -1,0 +1,218 @@
+<div class="variants-product-item input" data-handle='{{ product.handle }}'>
+
+  {%- for option in product.options_with_values -%}
+    {% liquid
+      assign isColor = false
+      assign optionName = option.name | handleize | downcase
+      assign setting_option_name = settings.option_name | handleize | downcase
+    %}
+
+  {%- if optionName == setting_option_name and settings.shop_by_color_enable -%}
+
+  {% assign option_index = forloop.index %}
+  <div class="variants-item variants-item-{{ option.name | downcase | replace: " ", " -" }}">
+    <!-- <legend class="form__label">{{ option.name }}</legend> -->
+    {%- for value in option.values -%}
+      {% liquid
+        assign value_name = value | escape | downcase
+        assign image_color = ''
+        assign filter_color = settings.filter_color_1 | escape | downcase
+        if value_name == filter_color and settings.image_color_1
+          assign image_color = settings.image_color_1
+        endif
+
+        assign filter_color = settings.filter_color_2 | escape | downcase
+        if value_name == filter_color and settings.image_color_2
+          assign image_color = settings.image_color_2
+        endif
+
+        assign filter_color = settings.filter_color_3 | escape | downcase
+        if value_name == filter_color and settings.image_color_3
+          assign image_color = settings.image_color_3
+        endif
+
+        assign filter_color = settings.filter_color_4 | escape | downcase
+        if value_name == filter_color and settings.image_color_4
+          assign image_color = settings.image_color_4
+        endif
+
+        assign filter_color = settings.filter_color_5 | escape | downcase
+        if value_name == filter_color and settings.image_color_5
+          assign image_color = settings.image_color_5
+        endif
+
+        assign filter_color = settings.filter_color_6 | escape | downcase
+        if value_name == filter_color and settings.image_color_6
+          assign image_color = settings.image_color_6
+        endif
+
+        assign filter_color = settings.filter_color_7 | escape | downcase
+        if value_name == filter_color and settings.image_color_7
+          assign image_color = settings.image_color_7
+        endif
+
+        assign filter_color = settings.filter_color_8 | escape | downcase
+        if value_name == filter_color and settings.image_color_8
+          assign image_color = settings.image_color_8
+        endif
+
+        assign filter_color = settings.filter_color_9 | escape | downcase
+        if value_name == filter_color and settings.image_color_9
+          assign image_color = settings.image_color_9
+        endif
+
+        assign filter_color = settings.filter_color_10 | escape | downcase
+        if value_name == filter_color and settings.image_color_10
+          assign image_color = settings.image_color_10
+        endif
+
+        assign filter_color = settings.filter_color_11 | escape | downcase
+        if value_name == filter_color and settings.image_color_11
+          assign image_color = settings.image_color_11
+        endif
+
+        assign filter_color = settings.filter_color_12 | escape | downcase
+        if value_name == filter_color and settings.image_color_12
+        assign image_color = settings.image_color_12
+        endif
+
+        assign filter_color = settings.filter_color_13 | escape | downcase
+        if value_name == filter_color and settings.image_color_13
+          assign image_color = settings.image_color_13
+        endif
+
+        assign filter_color = settings.filter_color_14 | escape | downcase
+        if value_name == filter_color and settings.image_color_14
+          assign image_color = settings.image_color_14
+        endif
+
+        assign filter_color = settings.filter_color_15 | escape | downcase
+        if value_name == filter_color and settings.image_color_15
+          assign image_color = settings.image_color_15
+        endif
+
+        assign filter_color = settings.filter_color_16 | escape | downcase
+        if value_name == filter_color and settings.image_color_16
+          assign image_color = settings.image_color_16
+        endif
+
+        assign filter_color = settings.filter_color_17 | escape | downcase
+        if value_name == filter_color and settings.image_color_17
+          assign image_color = settings.image_color_17
+        endif
+
+        assign filter_color = settings.filter_color_18 | escape | downcase
+        if value_name == filter_color and settings.image_color_18
+          assign image_color = settings.image_color_18
+        endif
+
+        assign filter_color = settings.filter_color_19 | escape | downcase
+        if value_name == filter_color and settings.image_color_19
+          assign image_color = settings.image_color_19
+        endif
+
+        assign filter_color = settings.filter_color_20 | escape | downcase
+        if value_name == filter_color and settings.image_color_20
+          assign image_color = settings.image_color_20
+        endif
+
+        for variant in product.variants
+          assign vOption = 'option' | append: option_index
+          if value == variant[vOption]
+            assign currenVariant = variant
+            break
+          endif
+        endfor
+        assign hasImage = false
+        if currenVariant.image
+          assign hasImage = true
+        endif
+      %}
+    
+
+    <div class="variant variant-color variant-{{ value | downcase | replace: " ", " -" }}" {% if
+      hasImage %}data-img='{{ currenVariant.image.src | image_url: width: 2000 }}'{% endif %}>
+      <input type="radio" class="{{ option.name }}-{{ product.id }}"
+        id="{{ option.name }}-{{ forloop.index0 }}-{{ product.id }}"
+        name="{{ option.name }}" value="{{ value | escape }}">
+      <label for="{{ option.name }}-{{ forloop.index0 }}-{{ product.id }}" {%- if
+        bg_color == '' -%} class="label-image" {%- endif -%}>
+        {%- if hasImage -%}
+        <img loading="lazy" width="auto" height="auto" src="{{ currenVariant.image.src | image_url: width: 40 }}"
+          alt="{{ option.name }}" title="{{ value }}">
+        <svg class="icon icon-checkmark" width="11" height="7" viewBox="0 0 11 7" fill="none"
+          xmlns="https://www.w3.org/2000/svg">
+
+          <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {%- else -%}
+        {%- if image_color != '' -%}
+        <img loading="lazy" width="auto" height="auto" src="{{ image_color | image_url: width: 50 }}"
+          alt="{{ option.name }}" title="{{ value }}">
+        <svg class="icon icon-checkmark" width="11" height="7" viewBox="0 0 11 7" fill="none"
+          xmlns="https://www.w3.org/2000/svg">
+
+          <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {%- else -%}
+        {{ value }}
+        {%- endif -%}
+        {%- endif -%}
+      </label>
+
+    </div>
+
+    {%- endfor -%}
+  </div>
+  {%- else -%}
+  {% if optionName contains 'colo' %}
+  {% assign isColor = true %}
+  {% endif %}
+  {% assign option_index = forloop.index %}
+  <div class="variants-item variants-item-{{ option.name | downcase | replace: " ", " -" }}">
+    <!-- <legend class="form__label">{{ option.name }}</legend> -->
+    {%- for value in option.values -%}
+
+    {% liquid
+      for variant in product.variants
+        assign vOption = 'option' | append: option_index
+        if value == variant[vOption]
+          assign currenVariant = variant
+          break
+        endif
+      endfor
+      assign hasImage = false
+      if isColor and currenVariant.image
+        assign hasImage = true
+      endif
+    %}
+
+    <div class="variant variant-{{ value | downcase | replace: " ", " -" }}" {% if hasImage
+      %}data-img='{{ currenVariant.image.src | image_url: width: 2000 }}'{% endif %}>
+      <input type="radio" class="{{ option.name }}-{{ product.id }}"
+        id="{{ option.name }}-{{ forloop.index0 }}-{{ product.id }}"
+        name="{{ option.name }}" value="{{ value | escape }}">
+      <label for="{{ option.name }}-{{ forloop.index0 }}-{{ product.id }}" {%- if
+        bg_color == '' -%} class="label-image" {%- endif -%}>
+        {%- if hasImage -%}
+        <img loading="lazy" width="auto" height="auto" src="{{ currenVariant.image.src | image_url: width: 40 }}"
+          alt="{{ option.name }}">
+        <svg class="icon icon-checkmark" width="11" height="7" viewBox="0 0 11 7" fill="none"
+          xmlns="https://www.w3.org/2000/svg">
+
+          <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {%- else -%}
+        {{ value }}
+        {%- endif -%}
+      </label>
+    </div>
+
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+  {%- endfor -%}
+</div>

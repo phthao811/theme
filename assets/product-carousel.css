@@ -1,0 +1,14 @@
+.product-carousel{
+    width: 100%;
+}
+.items-product{
+    padding: 0 15px;
+    width: 25%;
+    float: left;
+}
+.product-carousel-slick{
+    margin: 0 -15px
+}
+.product-carousel .product-items{
+    margin: 0 1.5rem;
+} 

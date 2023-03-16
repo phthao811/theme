@@ -1,0 +1,57 @@
+.collection-carousel .container-fluid{
+    padding: 0;
+}
+.collection-content-carousel{
+    margin: 0 15px;
+    position: relative;
+    max-width: 410px;
+    overflow: hidden;
+    
+}
+.title-collection-carousel{
+    position: absolute;
+    bottom: 20px;
+    left: 7%;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #fff;
+    margin: 0;
+}
+
+.title-collection-carousel span{
+    color: #000;
+}
+.collection-carousel-image-effect .link-collection-carousel{
+    overflow: hidden;
+}
+.collection-carousel-image-effect .link-collection-carousel img{
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.collection-carousel-image-effect .link-collection-carousel:hover img{
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+/* CSS STYLE 1 */
+.collection-style-1 .title-collection-carousel {
+    position: unset;
+    display: block;
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--accent-5);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+.collection-style-1 .cat-total {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 30px;
+    color: var(--accent-6);
+}

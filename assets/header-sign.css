@@ -1,0 +1,224 @@
+.header-sign {
+  position: relative;
+}
+.icon-leofal {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+  font-style: normal;
+  display: block;
+  font-size: 3rem;
+}
+.icon-leofal:before {
+  content: "\f7a4";
+}
+
+.mini-acount {
+  width: 15rem;
+  z-index: 999;
+  background-color: #fff;
+  color: #666;
+  padding: 1rem;
+  position: absolute;
+  font-size: 1.3rem;
+  top: 150%;
+  right: 0;
+  border: 0.1rem solid #eaeaea;
+  box-shadow: 0 0 3rem 0 rgb(0 0 0 / 5%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+
+.mini-acount.active {
+  visibility: visible;
+  opacity: 1;
+  transition: all ease 0.5s;
+  top: 100%;
+  display: block;
+}
+
+.mini-acount p {
+  margin: 0;
+}
+.mini-acount a {
+  color: #666;
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.3rem;
+  font-family: var(--g-font-1);
+}
+.mini-acount a:hover {
+  color: #000;
+}
+
+.mini-acount .text-hide {
+  font-size: 1.3rem;
+  padding: 0.8rem 1rem;
+}
+.mini-acount .js-wishlist-count,
+.mini-acount .js-compare-count {
+  display: inline-block;
+  position: unset;
+  background-color: transparent;
+  color: #666;
+  width: unset;
+  width: unset;
+  font-size: 1.3rem;
+  height: unset;
+  border-radius: unset;
+  text-align: center;
+  line-height: 1.3rem;
+}
+.block_currencies ul {
+  padding: 0;
+}
+.block_currencies .title-currencies {
+  padding: 1rem;
+}
+.currencies {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-sign button {
+  border: none;
+  background: transparent;
+  padding: 1rem 0;
+}
+.btn-compare .cart-count-bubble {
+  top: -12px;
+  right: -16px;
+}
+a.btn-compare {
+  position: relative;
+}
+/* CSS */
+.header-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-login p {
+  margin-bottom: 0;
+}
+.header-login p a {
+  color: var(--color-header) !important;
+  position: relative;
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 2.143;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+.header-login p a:after {
+  content: "/";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -9px;
+}
+.header-login p:last-child a::after {
+  display: none;
+}
+.header-sign {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header-login p:last-child a {
+  margin-right: 0;
+}
+div#cart-count-custom {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 15px;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+}
+.fa-unlock-alt:before {
+  content: "\f13e";
+}
+.fa-user:before {
+  content: "\f007";
+}
+.fa-sign-out:before {
+  content: "\f08b";
+}
+.fa-heart-o:before {
+  content: "\f08a";
+}
+.fa-retweet:before {
+  content: "\f079";
+}
+i.fa.fa-edit:before {
+  content: "\f044";
+}
+.header-icon .mini-acount.active i {
+  color: var(--accent-6);
+  font-size: 13px;
+}
+.mini-acount a {
+  color: var(--accent-6);
+  padding: 0px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (min-width: 992px) {
+  .header-cart:hover .product-minincart {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    margin-top: 0;
+  }
+  .block_currencies:hover #currencies {
+    transform: scale(1);
+  }
+  .mini-acount .wrap-login,
+  .show_login,
+  .mini-acount.active {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  #currencies.active {
+    visibility: visible;
+    opacity: 1;
+    transition: all ease 0.5s;
+    transform: scale(1);
+  }
+  .header-login {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  img.icon_header {
+    width: 20px;
+  }
+  .header-icon {
+    gap: 0 18px;
+  }
+}
+@media (max-width: 576px) {
+  .mini-acount {
+    left: 0;
+    right: unset;
+  }
+}
+@media (max-width: 991px) {
+  .site-header__compare {
+    display: none;
+  }
+}

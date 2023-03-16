@@ -1,0 +1,312 @@
+.advanced-content-template {
+  margin-bottom: 0;
+}
+
+.advanced-content-card {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.advanced-content-card .title-collection,
+.advanced-content-card .collection-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: capitalize;
+
+  text-align: center;
+}
+.advanced-content-card .title-collection {
+  font-size: 2.4rem;
+}
+.advanced-content-card .collection-title {
+  font-size: 4.4rem;
+}
+.advanced-content-card img {
+  display: block;
+  overflow: hidden;
+  border-style: none;
+  transition: all 0.5s;
+}
+.advanced-content-card:hover img {
+  transform: scale(1.1);
+}
+
+.advanced-content_text h3 {
+  font-weight: 400;
+  line-height: 1.2;
+  padding-bottom: 0;
+  font-size: 58px;
+  margin-bottom: 5px;
+  color: var(--accent-5);
+}
+
+.advanced-content_text p {
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  color: var(--accent-5);
+  font-size: 18px;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "Marcellus", serif;
+}
+
+.advanced-sub_content {
+  font-size: 36px;
+  line-height: 1.167;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  font-family: "Marcellus", serif;
+  text-transform: uppercase;
+}
+
+.advanced-content_text .link-base {
+  padding: 14.5px 30.6px;
+}
+
+.advanced-image-blog {
+  position: relative;
+  overflow: hidden;
+  align-self: center;
+}
+
+.advanced-image {
+  position: relative;
+}
+.advanced-image-content {
+  text-align: center;
+}
+.advanced-image-content h3 {
+  margin: 3rem 0 2.5rem;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+.advanced-image-content p {
+  line-height: 2.6rem;
+  margin: 0.8rem 0;
+  font-weight: 400;
+}
+
+.advanced-image-blog:before,
+.advanced-image-blog:after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+}
+.advanced-image:hover .advanced-image-blog:before,
+.advanced-image:hover .advanced-image-blog:after {
+  transform: scale(1);
+  opacity: 1;
+}
+.advanced-image-blog img {
+  transition: all 0.5s ease-in-out;
+}
+.advanced-image-blog:hover img {
+  transform: scale(1.1);
+}
+.advanced-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.advanced-product-carousel {
+  width: 100%;
+}
+
+.image-advanced__media--placeholder {
+  background-color: rgba(var(--color-foreground), 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-advanced__media--placeholder > svg {
+  position: absolute;
+  left: 50%;
+  max-width: 80rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  fill: currentColor;
+}
+
+.advanced-description {
+  font-size: 15px;
+  line-height: 1.667;
+  margin-bottom: 65px;
+  color: var(--accent-6);
+}
+
+a.link-base.btn-white {
+  background-color: transparent;
+  color: var(--accent-3);
+  border-radius: 25px;
+  margin-left: 10px;
+  border: 2px solid;
+  border-color: var(--border);
+}
+a.link-base.btn-white:hover {
+  background-color: var(--primary);
+  color: var(--accent-4);
+  border-color: var(--primary);
+}
+/* CSS TEXT STYLE 1 */
+.advanced-content_text.text-list-style-1 h3 {
+  font-weight: 400;
+  line-height: 25px;
+  padding-bottom: 0;
+  font-size: 16px;
+  margin-bottom: 0px;
+  color: var(--primary);
+}
+.advanced-content_text.text-list-style-1 p {
+  letter-spacing: 0;
+  margin: 15px 0 30px;
+  color: var(--accent-5);
+  font-size: 48px;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-family: Marcellus, serif;
+}
+.text-list-style-1 .advanced-description {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 65px;
+  color: var(--accent-6);
+}
+.advanced-content_text.text-list-style-1 .link-base {
+  padding: 12px 30.6px;
+}
+/* CSS TEXT STYLE 2 */
+.text-list-style-2 img.advanced__image-content {
+  height: auto;
+  max-width: 100%;
+}
+.advanced-content_text.text-list-style-2 h3 {
+  font-weight: 400;
+  line-height: 12px;
+  padding-bottom: 0;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+.advanced-content_text.text-list-style-2 p {
+  letter-spacing: 0;
+  color: var(--accent-5);
+  position: relative;
+  text-transform: uppercase;
+  font-family: Marcellus, serif;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 15px auto 45px;
+}
+.text-list-style-2 .advanced-sub_content {
+  font-family: "Lora";
+  text-transform: none;
+  margin: 20px auto 25px;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: italic;
+  color: var(--accent-6);
+}
+.text-list-style-2 .advanced-description {
+  color: var(--accent-6);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  line-height: 17px;
+}
+.text-list-style-2 .advanced-description span {
+  color: var(--accent-5);
+}
+@media (min-width: 1200px) {
+  .advanced-image-blog img {
+    width: 100%;
+  }
+  .advanced-content_text {
+    padding: 65px 0 0 40px;
+  }
+  /* CSS TEXT STYLE 1 */
+  .advanced-content_text.text-list-style-1 {
+    padding: 90px 15px 0 15px;
+  }
+  /* CSS TEXT STYLE 1 */
+  .advanced-content_text.text-list-style-2 {
+    padding: 40px 37px 0 7px;
+  }
+}
+@media (max-width: 991px) {
+  .advanced-description {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .advanced-content_text.text-list-base {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 30px;
+  }
+  /* CSS TEXT STYLE 1 */
+  .advanced-content_text.text-list-style-1 {
+    margin-bottom: 30px;
+    text-align: center !important;
+  }
+  .text-list-style-1 .wrap-btn {
+    justify-content: center;
+  }
+  .text-list-style-1 .advanced-description {
+    margin-bottom: 45px;
+  }
+  /* CSS TEXT STYLE 2 */
+  .text-list-style-2 {
+    padding: 30px 15px 15px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .advanced-content_text.text-list-style-1 p {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .advanced-content_text.text-list-style-1 p {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .advanced-sub_content {
+    font-size: 20px;
+  }
+  .advanced-content_text.text-list-base {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+  .advanced-content_text .link-base {
+    padding: 14.5px 29.6px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  /* CSS TEXT STYLE 1 */
+  .advanced-content_text.text-list-style-1 p {
+    font-size: 35px;
+    line-height: 36px;
+  }
+}

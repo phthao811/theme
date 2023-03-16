@@ -1,0 +1,129 @@
+.blog-items.blog-layout-items-3{
+    padding: 0 15px;
+}
+
+.blog-post .blog-list{
+    margin: 0 -15px;
+}
+
+.blog-items.blog-layout-items-3 .motion-reduce{
+    transform: scale(1);
+    transition: all 0.5s ease 0s!important;
+}
+
+.blog-items.blog-layout-items-3:hover .motion-reduce{
+    transition: all 0.5s ease 0s!important;
+    transform: scale(1.1);
+}
+
+.blog-layout-items-3 .blog-content{
+    margin-top: 0;
+    text-align: center;
+    position: relative;
+    padding: 25px 25px 0;
+}
+
+.blog-layout-items-3 .blog-content-top{
+    display: flex;
+    font-size: 13px;
+    justify-content: center;
+    color: var(--accent-6);
+}
+
+.blog-layout-items-3 .blog-date{
+    color: #999;
+}
+
+.blog-layout-items-3 .blog-author{
+    margin: 0 10px;
+}
+
+.blog-layout-items-3 .blog-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.blog-layout-items-3 .button-link::before{
+    content: "\f061";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -5px;
+    right: -30px;
+    font-family: "Font Awesome 5 Pro";
+    transform: rotate(-50deg);
+    transition: all 0.5s;
+    display: none;
+}
+
+.blog-layout-items-3 .button-link:hover:before {
+    transform: rotate(0deg);
+}
+
+p.blog__meta {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 1.7px 25px;
+    background-color: var(--primary);
+    width: max-content;
+    font-weight: 300;
+    color: var(--accent-4);
+}
+
+.blog__meta a.link-body-color {
+    font-size: 12px;
+    line-height: 11px;
+    color: var(--accent-4);
+    font-family: Marcellus,serif;
+    text-transform: uppercase;
+}
+
+i.far.fa-comment-alt::before {
+    content: "\f27a";
+}
+.fa-share-alt:before {
+    content: "\f1e0";
+}
+
+i.far.fa-comment-alt ,
+.fa-share-alt {
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+p.blog-description {
+    padding-top: 20px;
+    text-align: center;
+    line-height: 1.563;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--accent-6);
+}
+
+.blog-layout-items-3 .button-link {
+    letter-spacing: .5px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.786;
+    text-transform: uppercase;
+    color: var(--accent-5);
+    font-family: 'Marcellus', serif;
+    transition: 0.3s all;
+}
+
+.blog-layout-items-3 .button-link:hover {
+    color: var(--color-base-link-hover);
+}

@@ -1,0 +1,135 @@
+.service-content {
+  display: flex;
+  justify-content: center;
+}
+.service-content.icon-top {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.service-content.icon-left {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.list-icon {
+  padding: 4rem 2rem;
+}
+
+body:not(.index) .service-icon {
+  margin-bottom: 0;
+}
+.service-icon {
+  width: 100%;
+  max-width: 90px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-icon i {
+  color: var(--accent-4);
+  display: block;
+  text-align: center;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+  line-height: 17px;
+}
+.service-icon .leofal {
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+.service-icon .leofa-user-shield:before {
+  content: "\f505";
+}
+.service-icon .leofa-shipping-timed:before {
+  content: "\f48c";
+}
+.service-icon .leofa-map-marked-alt:before {
+  content: "\f5a0";
+}
+.service-icon .leofa-person-carry:before {
+  content: "\f4cf";
+}
+body:not(.index) .service-content.icon-top .service-icon svg,
+body:not(.index) .service-content.icon-top .service-icon img {
+  margin-bottom: 15px;
+}
+.service-content.icon-top .service-icon svg,
+.service-content.icon-top .service-icon img {
+  margin-bottom: 3.5rem;
+}
+.service-icon svg {
+  color: #333;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.service-content .service-title {
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 0;
+  color: var(--accent-4);
+}
+
+body:not(.index) .service-content .service-title {
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 0;
+  color: var(--accent-3);
+  text-transform: uppercase;
+}
+
+.service-content .service-text {
+  color: #444;
+  line-height: 3rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.service-decoration {
+  padding-left: 10px;
+}
+
+.fa-shipping-fast::before {
+  content: "\f48b";
+  font-size: 36px;
+}
+.fa-rings-wedding:before {
+  content: "\f81b";
+  font-size: 40px;
+}
+.fa-repeat::before {
+  content: "\f363";
+  font-size: 40px;
+}
+.fa-credit-card-front::before {
+  content: "\f38a";
+  font-size: 31px;
+}
+
+.service-section {
+  background: #9db4c4 no-repeat;
+}
+
+.box-service {
+  padding: 90px 0;
+}
+body:not(.index) .box-service {
+  padding: 0;
+}
+
+@media (max-width: 991px) {
+  .box-service {
+    gap: 30px 0;
+  }
+}
+@media (max-width: 767px) {
+  .box-service {
+    padding: 60px 0;
+  }
+}
